@@ -4,6 +4,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class HotelTest {
 
@@ -36,5 +37,15 @@ public class HotelTest {
 
         assertEquals(0, bedroom.getNumberOfGuest());
     }
+
+    @Test
+    public void canBookRoom(){
+        Booking booking = hotel.bookRoom(bedroom, 3);
+
+        assertNotNull(booking);
+        assertEquals(3,booking.getNumberOfNights());
+        assertEquals(bedroom, booking.getRoom());
+    }
+
 
 }
