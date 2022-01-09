@@ -21,4 +21,5 @@ public class Hotel {
     public Booking bookRoom(Room room, int numberOfNights){
         return new Booking(room, numberOfNights);
     }
+
 }
